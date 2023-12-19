@@ -1,0 +1,9 @@
+.carroucel-img {
+  top: 0;
+  margin-left: -10px;
+  width: 1980px;
+  min-height: 2100px;
+  height: 100%;
+  filter: grayscale(.9);
+  position: fixed;
+}
