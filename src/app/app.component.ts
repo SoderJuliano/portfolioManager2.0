@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import {timer} from 'rxjs';
+import {take} from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -11,12 +13,56 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'portfoliomanager2.0';
-  myvar: string = "hi";
+  isActive1: string = "active";
+  isActive2: string = "desactive";
+  isActive3: string = "desactive";
+  page: string = 'home';
 
-  ngOnInit(): void {
-    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-    //Add 'implements OnInit' to the class.
-    this.myvar = "Im a variable";
+  ngOnInit(): void {}
+
+  ngAfterViewInit(): void {
+    //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
+    //Add 'implements AfterViewInit' to the class.
+
+  }
+
+  loadCarroucel() {
+    this.carrocel();
+    setTimeout(() => {
+      this.carrocel();
+    }, 15000);
+    setTimeout(() => {
+      this.carrocel();
+    }, 35000);
+  }
+
+  carrocel() {
+    setTimeout(() => {
+      this.rotateClasses();
+    }, 3000);
+    setTimeout(() => {
+      this.rotateClasses();
+    }, 6000);
+    setTimeout(() => {
+      this.rotateClasses();
+    }, 9000);
+  }
+
+  rotateClasses() {
+    if (this.isActive1 === 'active') {
+        this.isActive1 = 'desactive';
+        this.isActive2 = 'active';
+    } else if (this.isActive2 === 'active') {
+        this.isActive2 = 'desactive';
+        this.isActive3 = 'active';
+    } else {
+        this.isActive3 = 'desactive';
+        this.isActive1 = 'active';
+    }
+  }
+
+  goto(page: string){
+    this.page = page;
   }
 }
 

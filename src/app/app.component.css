@@ -1,0 +1,40 @@
+@media (max-width: 786px) {
+  .side-bar {
+    display: none !important;
+  }
+}
+
+.circle-img {
+  background-image: url(../assets/me.jpeg);
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 30px auto;
+}
+
+.carroucel-img {
+  top: 0;
+  margin-left: -10px;
+  width: 1980px;
+  min-height: 2100px;
+  height: 100%;
+  filter: grayscale(.9);
+  position: fixed;
+}
+
+.span {
+  position: absolute;
+  margin-top: 0px;
+  margin-left: 10px;
+}
+
+.span:hover {
+  scale: 1.1;
+  color: rgb(30, 0, 255) !important;
+}
+
+.span:active {
+  scale: .99;
+}
+
