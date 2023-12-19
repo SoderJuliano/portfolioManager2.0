@@ -3,13 +3,14 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import {timer} from 'rxjs';
 import {take} from 'rxjs/operators';
+import { AboutComponent } from "./about/about.component";
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule, RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+    selector: 'app-root',
+    standalone: true,
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.css',
+    imports: [CommonModule, RouterOutlet, AboutComponent]
 })
 export class AppComponent {
   title = 'portfoliomanager2.0';
@@ -63,6 +64,7 @@ export class AppComponent {
 
   goto(page: string){
     this.page = page;
+    alert('page');
   }
 }
 
