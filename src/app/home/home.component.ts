@@ -15,28 +15,6 @@ export class HomeComponent {
 
   ngAfterViewInit(): void {}
 
-  loadCarroucel() {
-    this.carrocel();
-    setTimeout(() => {
-      this.carrocel();
-    }, 15000);
-    setTimeout(() => {
-      this.carrocel();
-    }, 35000);
-  }
-
-  carrocel() {
-    setTimeout(() => {
-      this.rotateClasses();
-    }, 3000);
-    setTimeout(() => {
-      this.rotateClasses();
-    }, 6000);
-    setTimeout(() => {
-      this.rotateClasses();
-    }, 9000);
-  }
-
   rotateClasses() {
     if (this.isActive1 === 'active') {
         this.isActive1 = 'desactive';

@@ -2,6 +2,10 @@
   .side-bar {
     display: none !important;
   }
+
+  .home {
+    width: 100% !important;
+  }
 }
 
 .circle-img {
@@ -21,10 +25,13 @@
 
 .span:hover {
   scale: 1.1;
-  color: rgb(30, 0, 255) !important;
+  color: cornflowerblue !important;
 }
 
 .span:active {
   scale: .99;
 }
 
+.side-bar{
+  z-index: 15;
+}
