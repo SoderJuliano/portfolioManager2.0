@@ -39,7 +39,7 @@
       <div *ngIf="page == 'home'" class="col-9 text-center bg-secondary home">
         <app-home />
       </div>
-      <div *ngIf="page == 'about'" class="col-9 bg-secondary">
+      <div *ngIf="page == 'about'" class="col-9 bg-secondary" [ngClass]="mainclass">
         <app-about />
       </div>
     </div>

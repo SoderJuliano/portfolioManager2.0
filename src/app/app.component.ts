@@ -16,12 +16,22 @@ import { HomeComponent } from "./home/home.component";
 export class AppComponent {
   title = 'portfoliomanager2.0';
   page: string = 'home';
+  mainclass: string = "";
 
   ngOnInit(): void {}
 
   goto(page: string){
     this.page = page;
-    alert('page');
+
+    switch (page) {
+      case 'about':
+        this.mainclass = "whitebg";
+        break;
+      default:
+        this.mainclass = "";
+        break;
+    }
+
   }
 }
 

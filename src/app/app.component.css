@@ -35,3 +35,7 @@
 .side-bar{
   z-index: 15;
 }
+
+.whitebg {
+  background-color: whitesmoke !important;
+}
