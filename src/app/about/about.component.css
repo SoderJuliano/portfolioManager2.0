@@ -2,3 +2,7 @@
 .dot {
   width: 40px;
 }
+
+table {
+  --bs-table-bg: whitesmoke !important;
+}

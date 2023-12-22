@@ -8,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './about.component.css'
 })
 export class AboutComponent {
-
+  d = new Date();
+  year = this.d.getFullYear();
+  email: string = 'julianosoder1989@gmail.com';
 }
