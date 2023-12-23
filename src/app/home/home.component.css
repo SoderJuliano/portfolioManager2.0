@@ -20,7 +20,19 @@
 @media (max-width: 1000px) {
   .carroucel-img {
     width: 100%;
+    min-height: 95%;
   }
+
+  .mobyle-only {
+    display: block !important;
+    position: absolute;
+    top: 10%;
+    right: 10px;
+  }
+}
+
+.mobyle-only {
+  display: none;
 }
 
 .icon {

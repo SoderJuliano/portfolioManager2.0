@@ -1,10 +1,14 @@
-@media (max-width: 786px) {
+@media (max-width: 1000px) {
   .side-bar {
     display: none !important;
   }
 
   .home {
     width: 100% !important;
+  }
+
+  .mobile {
+    width: 100vw !important;
   }
 }
 

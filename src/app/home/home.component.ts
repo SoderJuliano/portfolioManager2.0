@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -12,6 +12,9 @@ export class HomeComponent {
   isActive1: string = "active";
   isActive2: string = "desactive";
   isActive3: string = "desactive";
+  @Output() gotoChange:EventEmitter<String> =new EventEmitter<String>();
+
+
 
   ngAfterViewInit(): void {}
 
@@ -26,5 +29,9 @@ export class HomeComponent {
         this.isActive3 = 'desactive';
         this.isActive1 = 'active';
     }
+  }
+
+  goto(page: string | undefined) {
+    this.gotoChange.emit(page);
   }
 }

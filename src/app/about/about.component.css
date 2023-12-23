@@ -6,3 +6,35 @@
 table {
   --bs-table-bg: whitesmoke !important;
 }
+
+@media (max-width: 1000px){
+  .off {
+    display: none;
+  }
+
+  .mobile {
+    width: 100% !important;
+    color: white;
+  }
+
+  table {
+    table-layout: fixed;
+    width: 310px;
+    border: 0px;
+    --bs-table-bg: #6c757d !important;
+    color: white;
+  }
+  table td {
+    width: 30%;
+    word-wrap: break-word;
+    color: white;
+  }
+
+  .dot {
+    display: none;
+  }
+
+  a {
+    color: white;
+  }
+}

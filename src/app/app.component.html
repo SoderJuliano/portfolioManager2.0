@@ -37,9 +37,9 @@
         </div>
       </div>
       <div *ngIf="page == 'home'" class="col-9 text-center bg-secondary home">
-        <app-home />
+        <app-home (gotoChange)="gotoChild($event)"/>
       </div>
-      <div *ngIf="page == 'about'" class="col-9 bg-secondary" [ngClass]="mainclass">
+      <div *ngIf="page == 'about'" class="col-9 bg-secondary mobile" [ngClass]="mainclass">
         <app-about />
       </div>
     </div>

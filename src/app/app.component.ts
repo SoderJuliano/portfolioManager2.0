@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import {timer} from 'rxjs';
-import {take} from 'rxjs/operators';
 import { AboutComponent } from "./about/about.component";
 import { HomeComponent } from "./home/home.component";
 
@@ -31,7 +29,11 @@ export class AppComponent {
         this.mainclass = "";
         break;
     }
-
+  }
+  gotoChild(event: string | any) {
+    console.log('event.trigger');
+    console.log(event);
+    this.page = event;
   }
 }
 
