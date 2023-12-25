@@ -40,7 +40,10 @@
         <app-home (gotoChange)="gotoChild($event)"/>
       </div>
       <div *ngIf="page == 'about'" class="col-9 bg-secondary mobile" [ngClass]="mainclass">
-        <app-about />
+        <app-about (gotoChange)="gotoChild($event)" />
+      </div>
+      <div *ngIf="page == 'resume'" >
+        <app-resume ></app-resume>
       </div>
     </div>
   </div>
