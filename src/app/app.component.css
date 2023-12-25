@@ -10,6 +10,20 @@
   .mobile {
     width: 100vw !important;
   }
+
+}
+
+@media (max-width: 1350px) and (min-width: 999px) {
+
+  .span {
+    font-size: 16px !important;
+    text-align: start;
+  }
+
+  .side-bar svg {
+    width: 30px !important;
+  }
+
 }
 
 .circle-img {
@@ -22,8 +36,7 @@
 }
 
 .span {
-  position: absolute;
-  margin-top: -1px;
+  align-self: center;
   margin-left: 10px;
 }
 
@@ -32,12 +45,22 @@
   color: cornflowerblue !important;
 }
 
+.span:hover svg {
+  fill: cornflowerblue !important;
+}
+
 .span:active {
   scale: .99;
 }
 
 .side-bar{
   z-index: 15;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item-menu {
+  margin-left: 40%;
 }
 
 .whitebg {
