@@ -18,3 +18,18 @@ h5 {
   width: 150px;
   text-align: center;
 }
+
+.mobile-breaker {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .mobile {
+    width: 100vw !important;
+  }
+
+  .mobile-breaker {
+    display: block !important;
+    height: 50px;
+  }
+}
