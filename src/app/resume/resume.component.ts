@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, EventEmitter, Output } from "@angular/core";
 
 @Component({
   selector: 'app-resume',
@@ -9,5 +9,10 @@ import { Component } from "@angular/core";
 })
 
 export class ResumeComponent {
+  @Output() gotoChange:EventEmitter<String> =new EventEmitter<String>();
+
+  goto(page: string | undefined) {
+    this.gotoChange.emit(page);
+  }
 
 }
