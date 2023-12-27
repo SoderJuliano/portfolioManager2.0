@@ -45,8 +45,8 @@
   color: cornflowerblue !important;
 }
 
-.span:hover svg {
-  fill: cornflowerblue !important;
+.item-menu:hover svg {
+  fill: rgb(100, 149, 237) !important;
 }
 
 .span:active {
