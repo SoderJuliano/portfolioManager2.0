@@ -23,6 +23,15 @@ h5 {
   display: none;
 }
 
+.close {
+  transform: translateY(100%);
+  transition: transform 0.6s ease-in-out;
+}
+
+.go-back {
+  display: none;
+}
+
 @media (max-width: 1000px) {
   .mobile {
     width: 100vw !important;
@@ -31,5 +40,12 @@ h5 {
   .mobile-breaker {
     display: block !important;
     height: 50px;
+  }
+
+  .go-back {
+    display: block;
+    position: absolute;
+    right: 25px;
+    top: 15px;
   }
 }

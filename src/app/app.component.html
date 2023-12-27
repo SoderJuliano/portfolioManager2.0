@@ -1,5 +1,5 @@
 <main>
-  <div class="container-fluid">
+  <div (mousedown)="ref.play()" class="container-fluid">
     <div class="row vh-100 mh-100">
       <div class="col-3 text-light bg-dark d-flex side-bar">
         <div class="circle-img"></div>
@@ -29,11 +29,11 @@
           </svg>
           <span class="fs-1 text-white span">Portfolio</span>
         </div>
-        <div (click)="goto('contact')" class="col-fluid p-4 w-100 d-flex position-relative item-menu">
+        <div (click)="goto('home')" class="col-fluid p-4 w-100 d-flex position-relative item-menu">
           <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
             <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
           </svg>
-          <span class="fs-1 text-white span">Contact</span>
+          <span (click)="openContact();" class="fs-1 text-white span">Contact</span>
         </div>
       </div>
       @if(page == 'home'){
@@ -48,9 +48,15 @@
       }
       @if(page == 'resume'){
         <div class="col-9 bg-body-white mobile">
-          <app-resume ></app-resume>
+          <app-resume (gotoChange)="gotoChild($event)"></app-resume>
+        </div>
+      }
+      @if(page == 'portfolio'){
+        <div class="col-9 mobile" style="background-color: #F5F8FD;">
+          <app-portfolio></app-portfolio>
         </div>
       }
     </div>
   </div>
 </main>
+<audio class="audio" #ref src="../assets/sounds/click.mp3"></audio>

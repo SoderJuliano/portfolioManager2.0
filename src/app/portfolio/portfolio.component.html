@@ -1,0 +1,40 @@
+<main>
+  <div class="container-fluid d-flex mt-5">
+    <div class="col-1"></div>
+    <div class="col-11">
+      <div class="row">
+        <h2 class="fw-bold">Portfolio</h2>
+      </div>
+      <div class="row">
+        <p class="mb-0">Here are my own projects that I have worked on at some point or that are still in development. These are open source projects, so if you are curious to see the code, feel free to access my github.</p>
+        <b>Note: My personal github, so there are no projects for companies I previously worked for.</b>
+      </div>
+      <div class="row mt-4">
+        <div class="container-fluid d-flex justify-content-center">
+          <div class="type-select">
+            <span (click)="switchSpan($event)" id="all" [className]="all">ALL</span>
+            <span (click)="switchSpan($event)" id="react" [className]="react">REACT</span>
+            <span (click)="switchSpan($event)" id="angular" [className]="angular">ANGULAR</span>
+            <span (click)="switchSpan($event)" id="vue" [className]="vue">VUE</span>
+            <span (click)="switchSpan($event)" id="php" [className]="php">PHP</span>
+            <span (click)="switchSpan($event)" id="api" [className]="api">API</span>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="container-fluid d-flex flex-wrap justify-content-between">
+          @for (project of projects; track project.name) {
+            @if (project.type.toLowerCase().includes(filter) || filter == 'all') {
+              <div class="col-4" (click)="open(project.url)">
+                <div class="card card-custom">
+                  <h3>{{project.name}}</h3>
+                  <p>{{project.type}}</p>
+                </div>
+              </div>
+            }
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

@@ -10,9 +10,17 @@ import { Component, EventEmitter, Output } from "@angular/core";
 
 export class ResumeComponent {
   @Output() gotoChange:EventEmitter<String> =new EventEmitter<String>();
+  close: string = '';
 
   goto(page: string | undefined) {
     this.gotoChange.emit(page);
   }
 
+  goback() {
+    this.close = "close";
+    setTimeout(() => {
+      this.goto("home");
+      this.close = "";
+    }, 700);
+  }
 }
