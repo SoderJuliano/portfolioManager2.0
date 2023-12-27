@@ -44,8 +44,7 @@
   margin-left: 10px;
 }
 
-.span:hover {
-  scale: 1.1;
+.item-menu:hover .span {
   color: cornflowerblue !important;
 }
 
