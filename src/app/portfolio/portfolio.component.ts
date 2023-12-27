@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, EventEmitter, Output } from "@angular/core";
 
 @Component({
   selector: 'app-portfolio',
@@ -8,6 +8,7 @@ import { Component } from "@angular/core";
 })
 
 export class PortfolioComponent {
+
   all: string = "selected";
   react: string = "";
   angular: string = "";
@@ -15,6 +16,9 @@ export class PortfolioComponent {
   php: string = "";
   api: string = "";
   filter = 'all';
+
+  @Output() gotoChange: EventEmitter<String> = new EventEmitter<String>();
+  close: string = '';
 
   projects = [
     {
@@ -28,7 +32,7 @@ export class PortfolioComponent {
       url: 'https://soder-pokedex.netlify.app/'
     },
     {
-      name: 'poekon mini-game',
+      name: 'pokemon mini-game',
       type: 'React.js',
       url: 'https://julianosoderpokemonbattle.netlify.app/'
     },
@@ -56,9 +60,13 @@ export class PortfolioComponent {
       name: 'Abra Api',
       type: 'NestJS API',
       url: 'https://abra-api.top/api'
+    },
+    {
+      name: 'Sapory Italian menu',
+      type: 'Vue.js',
+      url: 'https://deluxe-sapory.netlify.app'
     }
 ];
-
 
   switchSpan(event: any) {
 
@@ -96,5 +104,13 @@ export class PortfolioComponent {
 
   open(url: string) {
     window.open(url, '_blank');
+  }
+
+  goback() {
+    this.close = "close";
+    setTimeout(() => {
+      this.gotoChange.emit("home");
+      this.close = "";
+    }, 700);
   }
 }

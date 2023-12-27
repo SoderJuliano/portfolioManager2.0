@@ -70,3 +70,12 @@
 .whitebg {
   background-color: whitesmoke !important;
 }
+
+#selected svg {
+  fill: cornflowerblue !important;
+}
+
+
+#selected .span {
+  color: cornflowerblue !important;
+}

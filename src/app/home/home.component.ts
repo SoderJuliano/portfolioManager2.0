@@ -9,6 +9,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+
   isActive1: string = "active";
   isActive2: string = "desactive";
   isActive3: string = "desactive";
@@ -33,5 +34,9 @@ export class HomeComponent {
 
   goto(page: string | undefined) {
     this.gotoChange.emit(page);
+  }
+
+  gotoContact() {
+    window.open('https://www.linkedin.com/in/julianosoder', '_blank');
   }
 }

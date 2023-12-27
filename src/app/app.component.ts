@@ -17,15 +17,33 @@ export class AppComponent {
   title = 'portfoliomanager2.0';
   page: string = 'home';
   mainclass: string = "";
+  home: string = 'selected';
+  about: string = '';
+  portfolio: string = '';
+  resume: string = '';
 
   ngOnInit(): void {}
 
   goto(page: string){
     this.page = page;
+    this.about = '';
+    this.home = '';
+    this.portfolio = '';
+    this.resume = '';
 
     switch (page) {
       case 'about':
         this.mainclass = "whitebg";
+        this.about = 'selected';
+        break;
+      case 'home':
+        this.home = 'selected';
+        break;
+      case 'resume':
+        this.resume = 'selected';
+        break;
+      case 'portfolio':
+        this.portfolio = 'selected';
         break;
       default:
         this.mainclass = "";
@@ -34,7 +52,6 @@ export class AppComponent {
   }
   gotoChild(event: string | any) {
     console.log('event.trigger');
-    console.log(event);
     this.page = event;
   }
 
