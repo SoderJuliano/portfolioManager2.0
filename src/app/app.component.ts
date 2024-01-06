@@ -51,7 +51,6 @@ export class AppComponent {
     }
   }
   gotoChild(event: string | any) {
-    console.log('event.trigger');
     this.page = event;
   }
 

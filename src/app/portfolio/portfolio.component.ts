@@ -65,6 +65,11 @@ export class PortfolioComponent {
       name: 'Sapory Italian menu',
       type: 'Vue.js',
       url: 'https://deluxe-sapory.netlify.app'
+    },
+    {
+      name: 'Lawyer website',
+      type: 'AngularJS',
+      url: 'https:ffsouza.adv.br'
     }
 ];
 
