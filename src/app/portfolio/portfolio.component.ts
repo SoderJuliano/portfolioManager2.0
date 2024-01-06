@@ -69,7 +69,7 @@ export class PortfolioComponent {
     {
       name: 'Lawyer website',
       type: 'AngularJS',
-      url: 'https:ffsouza.adv.br'
+      url: 'https://ffsouza.adv.br'
     }
 ];
 
